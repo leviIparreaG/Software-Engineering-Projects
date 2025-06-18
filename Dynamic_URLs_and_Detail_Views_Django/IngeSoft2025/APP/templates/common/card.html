@@ -1,0 +1,13 @@
+<!-- APP/templates/common/card.html -->
+<div class="card-body">
+  <h5 class="card-title">{{ estudiante.nombres }} {{ estudiante.apellidos }}</h5>
+  <p class="card-text">
+    <strong>No. de cuenta:</strong> {{ estudiante.numCta }}
+  </p>
+  <p class="card-text">
+    <small class="text-muted">
+      Grupos: {{ estudiante.grupos.count }}
+    </small>
+  </p>
+  <button class="btn btn-primary mt-2">Detalles</button>
+</div>

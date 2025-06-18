@@ -1,0 +1,16 @@
+<div class="col-md-4 mb-3">
+    <div class="card" style="width: 18rem;">
+        <img src="https://via.placeholder.com/150" class="card-img-top" >
+        <div class="card-body">
+            <h5 class="card-title">{{ estudiante.nombres }} {{ estudiante.apellidos }}</h5>
+            <p class="card-title">{{ estudiante.numCta }}</p>
+            <p class="card-text">
+                Grupo(s): 
+                {% for grupo in estudiante.grupos.all %}
+                    {{ grupo.id_grupo }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            <a href="#" class="btn btn-primary">Detalles</a>
+        </div>
+    </div>
+</div>
